@@ -14,9 +14,9 @@ const StepTimeCapture = () => {
 
   const formatTime = (d: Date) => {
     const p = (n: number) => String(n).padStart(2, "0");
-    const numStr = `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}${p(d.getHours())}${p(d.getMinutes())}`;
+    const numStr = `${p(d.getMonth() + 1)}${p(d.getDate())}${p(d.getHours())}${p(d.getMinutes())}`;
     return {
-      date: `${d.getFullYear()}年${p(d.getMonth() + 1)}月${p(d.getDate())}日`,
+      date: `${p(d.getMonth() + 1)}月${p(d.getDate())}日`,
       time: `${p(d.getHours())}:${p(d.getMinutes())}`,
       numStr,
     };

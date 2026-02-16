@@ -39,12 +39,12 @@ const Particles = () => {
 };
 
 const StepFinalResult = () => {
-  const { mode, getM, getK, getT, reset } = useMagic();
+  const { mode, getM, getX, getT, reset } = useMagic();
   const [showParticles, setShowParticles] = useState(true);
   const M = getM();
-  const K = getK();
+  const X = getX();
   const T = getT();
-  const result = M + K;
+  const result = M + X;
 
   useEffect(() => {
     const timer = setTimeout(() => setShowParticles(false), 4000);
@@ -82,7 +82,7 @@ const StepFinalResult = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3 font-mono text-sm md:text-base">
           <span className="text-accent break-all">{M}</span>
           <span className="text-muted-foreground">+</span>
-          <span className="text-neon-gold break-all">{K}</span>
+          <span className="text-neon-gold break-all">{X}</span>
           <span className="text-muted-foreground">=</span>
         </div>
 
@@ -110,7 +110,7 @@ const StepFinalResult = () => {
               transition={{ delay: 1.5 }}
               className="text-primary font-bold font-display text-sm md:text-lg"
             >
-              ✅ 时间定格成功！M + K = T
+              ✅ 时间定格成功！M + X = T
             </motion.p>
           )}
         </motion.div>
@@ -129,7 +129,7 @@ const StepFinalResult = () => {
             解密：变量抵消恒等式
           </div>
           <div className="font-mono text-sm space-y-3">
-            <div><span className="text-muted-foreground">M + K</span></div>
+            <div><span className="text-muted-foreground">M + X</span></div>
             <div>
               <span className="text-muted-foreground">= </span>
               <span className="text-accent">(T - X)</span>

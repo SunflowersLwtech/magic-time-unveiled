@@ -85,7 +85,7 @@ export const MagicProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     return getX();
   }, [getX]);
 
-  const nextStep = useCallback(() => setStep(s => Math.min(s + 1, 4)), []);
+  const nextStep = useCallback(() => setStep(s => Math.min(s + 1, 3)), []);
   const prevStep = useCallback(() => setStep(s => Math.max(s - 1, 0)), []);
 
   const reset = useCallback(() => {

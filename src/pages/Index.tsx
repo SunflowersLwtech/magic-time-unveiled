@@ -6,7 +6,7 @@ import LiveClock from "@/components/magic/LiveClock";
 import StepRandomInput from "@/components/magic/StepRandomInput";
 import StepTimeCapture from "@/components/magic/StepTimeCapture";
 import StepMiddleValue from "@/components/magic/StepMiddleValue";
-import StepMagicNumber from "@/components/magic/StepMagicNumber";
+
 import StepFinalResult from "@/components/magic/StepFinalResult";
 
 const MagicApp = () => {
@@ -16,8 +16,7 @@ const MagicApp = () => {
     <StepRandomInput key="s0" />,
     <StepTimeCapture key="s1" />,
     <StepMiddleValue key="s2" />,
-    <StepMagicNumber key="s3" />,
-    <StepFinalResult key="s4" />,
+    <StepFinalResult key="s3" />,
   ];
 
   return (

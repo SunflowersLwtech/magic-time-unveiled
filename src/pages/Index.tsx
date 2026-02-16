@@ -65,10 +65,12 @@ const MagicApp = () => {
   );
 };
 
-const Index = () => (
-  <MagicProvider>
-    <MagicApp />
-  </MagicProvider>
-);
+const Index = () => {
+  return (
+    <MagicProvider>
+      <MagicApp />
+    </MagicProvider>
+  );
+};
 
 export default Index;

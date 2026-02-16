@@ -36,10 +36,10 @@ export const useMagic = () => {
   return ctx;
 };
 
-// Convert date to number string: YYYYMMDDHHmm (精确到分钟)
+// Convert date to number string: MMDDHHmm (不含年份和秒)
 function dateToString(d: Date): string {
   const pad = (n: number) => String(n).padStart(2, "0");
-  return `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}${pad(d.getHours())}${pad(d.getMinutes())}`;
+  return `${pad(d.getMonth() + 1)}${pad(d.getDate())}${pad(d.getHours())}${pad(d.getMinutes())}`;
 }
 
 function dateToNumber(d: Date): number {

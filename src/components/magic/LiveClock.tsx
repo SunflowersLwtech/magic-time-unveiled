@@ -16,7 +16,6 @@ const LiveClock = () => {
     { label: "日", value: pad(now.getDate()) },
     { label: "时", value: pad(now.getHours()) },
     { label: "分", value: pad(now.getMinutes()) },
-    { label: "秒", value: pad(now.getSeconds()) },
   ];
 
   return (
@@ -32,7 +31,7 @@ const LiveClock = () => {
                   animate={{ rotateX: 0, opacity: 1 }}
                   exit={{ rotateX: 90, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="inline-block font-display text-lg md:text-3xl font-bold text-secondary text-glow-cyan"
+                  className="inline-block font-display text-2xl md:text-4xl font-bold text-secondary text-glow-cyan"
                 >
                   {digit}
                 </motion.span>

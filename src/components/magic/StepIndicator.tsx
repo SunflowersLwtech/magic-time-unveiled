@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useMagic } from "./MagicContext";
 
-const steps = ["输入随机数", "时间锚定", "计算中间值", "神奇数字", "惊喜定格"];
+const steps = ["输入随机数", "时间锚定", "神奇数字", "惊喜定格"];
 
 const StepIndicator = () => {
   const { step } = useMagic();

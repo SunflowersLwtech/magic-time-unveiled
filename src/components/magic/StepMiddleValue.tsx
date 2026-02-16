@@ -46,13 +46,13 @@ const StepMiddleValue = () => {
             className="space-y-6"
           >
             {/* Demo mode: just show M dramatically */}
-            <div className="glass-card rounded-xl p-8 max-w-lg mx-auto text-center space-y-4">
+            <div className="glass-card rounded-xl p-4 md:p-8 max-w-lg mx-auto text-center space-y-4 overflow-hidden">
               <p className="text-sm text-muted-foreground">中间值 M</p>
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.3, type: "spring" }}
-                className="font-display text-4xl md:text-6xl font-bold text-accent text-glow-pink"
+                className="font-display text-xl md:text-4xl font-bold text-accent text-glow-pink break-all"
               >
                 {M}
               </motion.div>
@@ -64,13 +64,13 @@ const StepMiddleValue = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="glass-card rounded-xl p-6 max-w-lg mx-auto space-y-4 border border-primary/30"
+                className="glass-card rounded-xl p-4 md:p-6 max-w-lg mx-auto space-y-4 border border-primary/30 overflow-hidden"
               >
                 <div className="flex items-center gap-2 text-primary text-sm font-semibold">
                   <Eye className="w-4 h-4" />
                   解密：真实计算逻辑
                 </div>
-                <div className="font-mono text-sm space-y-2">
+                <div className="font-mono text-xs md:text-sm space-y-2 break-all">
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
                     <span className="text-muted-foreground">目标 T = </span>
                     <span className="text-secondary">{T}</span>

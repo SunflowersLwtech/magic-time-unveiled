@@ -20,7 +20,7 @@ const LiveClock = () => {
   ];
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2">
+    <div className="flex flex-wrap items-center justify-center gap-1 md:gap-2">
       {parts.map((p, i) => (
         <div key={p.label} className="flex items-baseline gap-0.5">
           <div className="flex">
@@ -32,15 +32,15 @@ const LiveClock = () => {
                   animate={{ rotateX: 0, opacity: 1 }}
                   exit={{ rotateX: 90, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="inline-block font-display text-2xl md:text-4xl font-bold text-secondary text-glow-cyan"
+                  className="inline-block font-display text-lg md:text-3xl font-bold text-secondary text-glow-cyan"
                 >
                   {digit}
                 </motion.span>
               </AnimatePresence>
             ))}
           </div>
-          <span className="text-xs text-muted-foreground">{p.label}</span>
-          {i === 2 && <span className="mx-2 text-muted-foreground">|</span>}
+          <span className="text-[10px] md:text-xs text-muted-foreground">{p.label}</span>
+          {i === 2 && <span className="mx-1 md:mx-2 text-muted-foreground">|</span>}
         </div>
       ))}
     </div>

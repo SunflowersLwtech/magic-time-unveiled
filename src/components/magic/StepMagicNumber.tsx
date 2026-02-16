@@ -57,10 +57,10 @@ const StepMagicNumber = () => {
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ type: "spring", damping: 10, duration: 0.8 }}
-              className="glass-card rounded-xl p-8 max-w-md mx-auto text-center space-y-4"
+              className="glass-card rounded-xl p-4 md:p-8 max-w-md mx-auto text-center space-y-4 overflow-hidden"
             >
               <p className="text-sm text-muted-foreground">神奇数字 K</p>
-              <div className="font-display text-5xl md:text-7xl font-bold text-neon-gold text-glow-gold">
+              <div className="font-display text-3xl md:text-5xl font-bold text-neon-gold text-glow-gold break-all">
                 {K}
               </div>
             </motion.div>

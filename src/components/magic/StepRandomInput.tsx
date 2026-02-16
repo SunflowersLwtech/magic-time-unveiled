@@ -49,13 +49,13 @@ const StepRandomInput = () => {
               value={num4}
               onChange={(e) => setNum4(e.target.value.replace(/\D/g, "").slice(0, 4))}
               placeholder="1234"
-              className="w-36 h-14 text-center font-display text-2xl font-bold bg-muted border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 neon-border"
+              className="w-28 md:w-36 h-12 md:h-14 text-center font-display text-xl md:text-2xl font-bold bg-muted border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 neon-border"
             />
             <Button
               variant="outline"
               size="icon"
               onClick={() => setNum4(randomDigits(4))}
-              className="h-14 w-14 border-border hover:bg-primary/10"
+              className="h-12 w-12 md:h-14 md:w-14 border-border hover:bg-primary/10"
             >
               <Dices className="w-5 h-5 text-primary" />
             </Button>
@@ -78,13 +78,13 @@ const StepRandomInput = () => {
               value={num5}
               onChange={(e) => setNum5(e.target.value.replace(/\D/g, "").slice(0, 5))}
               placeholder="56789"
-              className="w-44 h-14 text-center font-display text-2xl font-bold bg-muted border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 neon-border"
+              className="w-32 md:w-44 h-12 md:h-14 text-center font-display text-xl md:text-2xl font-bold bg-muted border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 neon-border"
             />
             <Button
               variant="outline"
               size="icon"
               onClick={() => setNum5(randomDigits(5))}
-              className="h-14 w-14 border-border hover:bg-primary/10"
+              className="h-12 w-12 md:h-14 md:w-14 border-border hover:bg-primary/10"
             >
               <Dices className="w-5 h-5 text-primary" />
             </Button>

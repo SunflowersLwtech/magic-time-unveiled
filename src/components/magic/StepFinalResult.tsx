@@ -18,12 +18,7 @@ const Particles = () => {
       {Array.from({ length: 30 }).map((_, i) => (
         <motion.div
           key={i}
-          initial={{
-            x: "50%",
-            y: "50%",
-            scale: 0,
-            opacity: 1,
-          }}
+          initial={{ x: "50%", y: "50%", scale: 0, opacity: 1 }}
           animate={{
             x: `${Math.random() * 100}%`,
             y: `${Math.random() * 100}%`,
@@ -60,7 +55,7 @@ const StepFinalResult = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="space-y-8 relative"
+      className="space-y-6 relative"
     >
       {showParticles && <Particles />}
 
@@ -70,9 +65,9 @@ const StepFinalResult = () => {
           animate={{ scale: 1 }}
           transition={{ type: "spring", damping: 10 }}
         >
-          <PartyPopper className="w-12 h-12 text-neon-gold mx-auto mb-4" />
+          <PartyPopper className="w-10 h-10 text-neon-gold mx-auto mb-2" />
         </motion.div>
-        <h2 className="font-display text-2xl md:text-3xl font-bold text-primary text-glow-purple">
+        <h2 className="font-display text-xl md:text-3xl font-bold text-primary text-glow-purple">
           惊喜定格！
         </h2>
       </div>
@@ -82,12 +77,12 @@ const StepFinalResult = () => {
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.3, type: "spring" }}
-        className="glass-card rounded-2xl p-8 max-w-md mx-auto text-center space-y-6"
+        className="glass-card rounded-2xl p-4 md:p-8 max-w-lg mx-auto text-center space-y-4 overflow-hidden"
       >
-        <div className="flex items-center justify-center gap-4 font-display text-2xl md:text-3xl">
-          <span className="text-accent">{M}</span>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3 font-mono text-sm md:text-base">
+          <span className="text-accent break-all">{M}</span>
           <span className="text-muted-foreground">+</span>
-          <span className="text-neon-gold">{K}</span>
+          <span className="text-neon-gold break-all">{K}</span>
           <span className="text-muted-foreground">=</span>
         </div>
 
@@ -95,7 +90,7 @@ const StepFinalResult = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.8, type: "spring", damping: 8 }}
-          className="font-display text-5xl md:text-7xl font-black text-secondary text-glow-cyan"
+          className="font-display text-2xl md:text-5xl font-black text-secondary text-glow-cyan break-all"
         >
           {result}
         </motion.div>
@@ -107,13 +102,13 @@ const StepFinalResult = () => {
           className="space-y-2"
         >
           <p className="text-sm text-muted-foreground">目标时间 T</p>
-          <p className="font-display text-3xl font-bold text-secondary">{T}</p>
+          <p className="font-display text-lg md:text-2xl font-bold text-secondary break-all">{T}</p>
           {result === T && (
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.5 }}
-              className="text-primary font-bold font-display text-lg"
+              className="text-primary font-bold font-display text-sm md:text-lg"
             >
               ✅ 时间定格成功！M + K = T
             </motion.p>
@@ -127,16 +122,14 @@ const StepFinalResult = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8 }}
-          className="glass-card rounded-xl p-6 max-w-xl mx-auto space-y-4 border border-primary/30"
+          className="glass-card rounded-xl p-4 md:p-6 max-w-xl mx-auto space-y-4 border border-primary/30"
         >
           <div className="flex items-center gap-2 text-primary text-sm font-semibold">
             <Eye className="w-4 h-4" />
             解密：变量抵消恒等式
           </div>
           <div className="font-mono text-sm space-y-3">
-            <div>
-              <span className="text-muted-foreground">M + K</span>
-            </div>
+            <div><span className="text-muted-foreground">M + K</span></div>
             <div>
               <span className="text-muted-foreground">= </span>
               <span className="text-accent">(T - X)</span>

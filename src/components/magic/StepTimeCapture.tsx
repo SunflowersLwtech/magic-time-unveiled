@@ -12,11 +12,15 @@ const StepTimeCapture = () => {
 
   const pad = (n: number) => String(n).padStart(2, "0");
 
-  const formatTime = (d: Date) => ({
-    date: `${d.getFullYear()}年${pad(d.getMonth() + 1)}月${pad(d.getDate())}日`,
-    time: `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`,
-    sum: d.getFullYear() + (d.getMonth() + 1) + d.getDate() + d.getHours() + d.getMinutes() + d.getSeconds(),
-  });
+  const formatTime = (d: Date) => {
+    const p = (n: number) => String(n).padStart(2, "0");
+    const numStr = `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`;
+    return {
+      date: `${d.getFullYear()}年${p(d.getMonth() + 1)}月${p(d.getDate())}日`,
+      time: `${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`,
+      numStr,
+    };
+  };
 
   const ct = capturedTime ? formatTime(capturedTime) : null;
 
@@ -54,7 +58,7 @@ const StepTimeCapture = () => {
             </span>
           </div>
           <div className="text-sm text-muted-foreground">
-            时间数值 T = <span className="text-foreground font-mono font-bold">{ct.sum}</span>
+            时间数值 T = <span className="text-foreground font-mono font-bold">{ct.numStr}</span>
           </div>
         </motion.div>
       )}

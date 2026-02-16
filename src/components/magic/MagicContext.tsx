@@ -36,16 +36,14 @@ export const useMagic = () => {
   return ctx;
 };
 
-// Convert date to number: YYYYMMDDHHmmss -> sum of digits or a simpler number
+// Convert date to number string: YYYYMMDDHHmmss
+function dateToString(d: Date): string {
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
+}
+
 function dateToNumber(d: Date): number {
-  const y = d.getFullYear();
-  const mo = d.getMonth() + 1;
-  const da = d.getDate();
-  const h = d.getHours();
-  const mi = d.getMinutes();
-  const s = d.getSeconds();
-  // Use sum: year + month + day + hour + minute + second
-  return y + mo + da + h + mi + s;
+  return Number(dateToString(d));
 }
 
 function parseCustomTarget(s: string): number {

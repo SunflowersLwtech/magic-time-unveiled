@@ -31,7 +31,7 @@ const LiveClock = () => {
                   animate={{ rotateX: 0, opacity: 1 }}
                   exit={{ rotateX: 90, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="inline-block font-display text-2xl md:text-4xl font-bold text-secondary text-glow-cyan"
+                  className="inline-block font-display text-3xl md:text-5xl font-black italic tracking-wider bg-gradient-to-br from-secondary via-primary to-accent bg-clip-text text-transparent text-glow-cyan drop-shadow-[0_0_12px_hsl(var(--neon-cyan)/0.6)]"
                 >
                   {digit}
                 </motion.span>
